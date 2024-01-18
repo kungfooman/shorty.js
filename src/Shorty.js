@@ -154,7 +154,7 @@ class Shorty {
     this.data = data;
     var output = '';
     try {
-      for (var i=0; i>=0; i++) {
+      while (true) {
         var token = this.readNode( );
         output += token;
         var node = this.findNode( token );
