@@ -1,8 +1,19 @@
+/**
+ * @typedef {object} Node
+ * @property {number} up
+ * @property {number} weight
+ * @property {string} [symbol]
+ */
 class Shorty {
+  /** @type {Node[]} */
+  nodes = [];
   constructor(tokensize) {
     this.tokensize = tokensize||10;
     this.reset(true); 
   }
+  /**
+   * @param {boolean} full - todo
+   */
   reset(full) {
     if (full===true) {
       this.nodes     = [{up:0,weight:0}];
